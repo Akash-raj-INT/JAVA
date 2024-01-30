@@ -1,0 +1,22 @@
+public class LogicalOperatorsExample {
+    public static void main(String[] args) {
+        // AND Operator (&&)
+        int num1 = 5;
+        int num2 = 10;
+        if (num1 > 0 && num2 > 0) {
+            System.out.println("Both numbers are positive.");
+        }
+
+        // OR Operator (||)
+        int age = 25;
+        if (age < 18 || age > 60) {
+            System.out.println("You are either too young or too old for this.");
+        }
+
+        // NOT Operator (!)
+        boolean isSunny = true;
+        if (!isSunny) {
+            System.out.println("It's not a sunny day.");
+        }
+    }
+}
