@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class CopyPriceCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input for the price of a copy
+        System.out.print("Enter the price of a copy: ");
+        float copyPrice = Float.parseFloat(scanner.nextLine());
+
+        // Input for the number of copies
+        System.out.print("Enter the number of copies: ");
+        int numberOfCopies = Integer.parseInt(scanner.nextLine());
+
+        // Calculate total price
+        float totalPrice = copyPrice * numberOfCopies;
+
+        // Print the results
+        System.out.println("Price of a copy: " + copyPrice);
+        System.out.println("Number of copies: " + numberOfCopies);
+        System.out.println("Total price for " + numberOfCopies + " copies: " + totalPrice);
+    }
+}
