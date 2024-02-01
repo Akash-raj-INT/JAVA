@@ -1,0 +1,9 @@
+public class SignChecker {
+    public static void main(String[] args) {
+        double value = -5.4;  // You can change the value as needed
+
+        String sign = (value > 0) ? "Positive" : (value < 0) ? "Negative" : "Zero";
+
+        System.out.println("The sign of " + value + " is: " + sign);
+    }
+}
