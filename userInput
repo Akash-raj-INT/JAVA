@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class PercentageDecrease {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter the initial value
+        System.out.print("Enter the initial value: ");
+        double initialValue = scanner.nextDouble();
+
+        // Prompt the user to enter the final value
+        System.out.print("Enter the final value: ");
+        double finalValue = scanner.nextDouble();
+
+        // Calculate the percentage decrease
+        double percentageDecrease = ((initialValue - finalValue) / initialValue) * 100;
+
+        // Display the output
+        System.out.println("The percentage decrease is: " + percentageDecrease + "%");
+
+        // Close the Scanner
+        scanner.close();
+    }
+}
