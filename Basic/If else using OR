@@ -1,0 +1,11 @@
+public class IfElseOrCondition {
+    public static void main(String[] args) {
+        int number = 10;
+
+        if (number > 0 || number < 0) {
+            System.out.println("The number is non-zero.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+    }
+}
