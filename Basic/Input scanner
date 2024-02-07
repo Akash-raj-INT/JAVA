@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class SubjectMarks {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter marks for five subjects:");
+
+        System.out.print("Subject 1: ");
+        int subject1 = scanner.nextInt();
+
+        System.out.print("Subject 2: ");
+        int subject2 = scanner.nextInt();
+
+        System.out.print("Subject 3: ");
+        int subject3 = scanner.nextInt();
+
+        System.out.print("Subject 4: ");
+        int subject4 = scanner.nextInt();
+
+        System.out.print("Subject 5: ");
+        int subject5 = scanner.nextInt();
+
+        System.out.println("Marks entered:");
+        System.out.println("Subject 1: " + subject1);
+        System.out.println("Subject 2: " + subject2);
+        System.out.println("Subject 3: " + subject3);
+        System.out.println("Subject 4: " + subject4);
+        System.out.println("Subject 5: " + subject5);
+
+        scanner.close();
+    }
+}
