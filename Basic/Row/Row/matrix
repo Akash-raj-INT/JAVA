@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class FirstProgram {
+    public static void main(String[] args) {
+        int rows, cols;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Rows = ");
+        rows = sc.nextInt();
+
+        int jaggedarr[][] = new int[rows][];
+
+        for (int i = 0; i < rows; i++) {
+            System.out.print("Cols for row " + (i + 1) + " = ");
+            cols = sc.nextInt();
+            jaggedarr[i] = new int[cols];
+
+            for (int j = 0; j < cols; j++) {
+                System.out.print("Enter col " + (j + 1) + " value: ");
+                jaggedarr[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int i = 0; i < jaggedarr.length; i++) {
+            for (int j = 0; j < jaggedarr[i].length; j++) {
+                System.out.print(jaggedarr[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
