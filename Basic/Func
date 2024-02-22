@@ -1,0 +1,8 @@
+add_numbers <- function(x, y) {
+  result <- x + y
+  return(result)
+}
+
+# Example usage:
+sum_result <- add_numbers(3, 5)
+print(sum_result)
