@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class StringManipulation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input a string
+        System.out.println("Enter a string:");
+        String input = scanner.nextLine();
+        
+        // Check if the length of the string is odd and eliminate the last character if true
+        if (input.length() % 2 != 0) {
+            input = input.substring(0, input.length() - 1);
+        }
+        
+        // Divide the string into two halves
+        int mid = input.length() / 2;
+        String firstHalf = input.substring(0, mid);
+        String secondHalf = input.substring(mid);
+        
+        // Reverse the first half
+        StringBuilder reversedFirstHalf = new StringBuilder(firstHalf);
+        reversedFirstHalf.reverse();
+        
+        // Reverse the second half
+        StringBuilder reversedSecondHalf = new StringBuilder(secondHalf);
+        reversedSecondHalf.reverse();
+        
+        // Combine the reversed halves into a single string
+        String result = reversedFirstHalf.toString() + reversedSecondHalf.toString();
+        
+        // Output the result
+        System.out.println("Output:");
+        System.out.println(result);
+    }
+}
