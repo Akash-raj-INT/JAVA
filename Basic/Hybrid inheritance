@@ -1,0 +1,39 @@
+class A {
+    void displayA() {
+        System.out.println("Class A");
+    }
+}
+
+class B extends A {
+    void displayB() {
+        System.out.println("Class B");
+    }
+}
+
+class C extends A {
+    void displayC() {
+        System.out.println("Class C");
+    }
+}
+
+class D extends B {
+    void displayD() {
+        System.out.println("Class D");
+    }
+}
+
+class E extends C {
+    void displayE() {
+        System.out.println("Class E");
+    }
+}
+
+class HybridInheritanceExample extends D {
+    public static void main(String[] args) {
+        HybridInheritanceExample obj = new HybridInheritanceExample();
+
+        obj.displayA(); // Accessing method from class A
+        obj.displayB(); // Accessing method from class B
+        obj.displayD(); // Accessing method from class D
+    }
+}
