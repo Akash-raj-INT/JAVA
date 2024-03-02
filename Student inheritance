@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+class Student {
+    String name;
+    int id;
+    char grade;
+
+    public Student(String name, int id, char grade) {
+        this.name = name;
+        this.id = id;
+        this.grade = grade;
+    }
+
+    public void displayDetails() {
+        System.out.println("Student Details:");
+        System.out.println("Name: " + name);
+        System.out.println("ID: " + id);
+        System.out.println("Grade: " + grade);
+    }
+}
+
+class GraduateStudent extends Student {
+    String thesisTopic;
+
+    public GraduateStudent(String name, int id, char grade, String thesisTopic) {
+        super(name, id, grade);
+        this.thesisTopic = thesisTopic;
+    }
+
+    @Override
+    public void displayDetails() {
+        super.displayDetails();
+        System.out.println("Thesis Topic: " + thesisTopic);
+    }
+}
+
+public class GradingSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter details for a student:");
+        System.out.print("Name: ");
+        String studentName = scanner.nextLine();
+        System.out.print("ID: ");
+        int studentId = scanner.nextInt();
+        System.out.print("Grade: ");
+        char studentGrade = scanner.next().charAt(0);
+        scanner.nextLine(); // Consume the newline character
+
+        System.out.println("Enter details for a graduate student:");
+        System.out.print("Thesis Topic: ");
+        String thesisTopic = scanner.nextLine();
+
+        GraduateStudent graduateStudent = new GraduateStudent(studentName, studentId, studentGrade, thesisTopic);
+        graduateStudent.displayDetails();
+
+        scanner.close();
+    }
+}
