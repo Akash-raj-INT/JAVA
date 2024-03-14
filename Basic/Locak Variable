@@ -1,0 +1,31 @@
+class AA{
+    void fun(){
+        class BA{
+            void fun1(){
+                if(true)
+                {
+                    class CA{
+
+                            void fun2(){
+                                System.out.println("Hello mukesh");
+                            }
+                    }
+                    CA obb=new CA();
+                    obb.fun2();
+
+
+                }
+            }
+        }
+        BA obj=new BA();
+        obj.fun1();
+
+    }
+}
+public class localclasstest {
+public static void main(String[] args) {
+    AA obj=new AA();
+    obj.fun();    
+}
+    
+}
