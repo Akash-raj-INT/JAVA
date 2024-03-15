@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+interface Shape {
+   void circle(double r);
+   void rectangle(double l, double b);
+}
+
+public class anouClass implements Shape {
+    
+    public void circle(double r) {
+        System.out.println("Area of circle: " + (3.14 * r * r));
+    }
+    public void rectangle(double l, double b) {
+        System.out.println("Area of rectangle: " + (l * b));
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        anouClass object = new anouClass();
+        
+        System.out.println("Area of circle: " + (3.14 * r * r));
+        double radius = scanner.nextDouble();
+        object.circle(radius);
+
+        System.out.println("Area of rectangle: " + (l * b));
+        double length = scanner.nextDouble();
+        double breadth = scanner.nextDouble(); 
+        object.rectangle(length, breadth);
+        
+        scanner.close();
+    }
+}
