@@ -1,0 +1,13 @@
+
+import java.util.*;
+import java.text.*;
+
+public class DateFormatInJapanMain {
+    public static void main(String... args) {
+        Calendar c = Calendar.getInstance();
+        c.set(Integer.parseInt(args[0]), Integer.parseInt(args[1]) - 1, Integer.parseInt(args[2]), 10, 0, 0);
+
+        System.out.println(DateFormat.getDateInstance().format(c.getTime()) + " in Japan is: " +
+                           DateFormat.getDateInstance(DateFormat.SHORT, Locale.JAPAN).format(c.getTime()));
+    }
+}
