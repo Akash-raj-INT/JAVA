@@ -1,0 +1,17 @@
+package q11313;
+
+import java.util.Arrays;
+
+public class ArraysDemo {
+    public static void main(String... args) {
+        Integer[] integerArr1 = {382, 34, 4, 223, 331}; // Corrected the array initialization
+        Integer[] integerArr2 = {4, 34, 223, 331, 382}; // Corrected the array initialization
+
+        // Sort the integerArr1
+        Arrays.sort(integerArr1);
+
+        // Use the equals method to compare the two integer arrays
+        boolean isEqual = Arrays.equals(integerArr1, integerArr2);
+        System.out.println("Are the arrays equal? " + isEqual);
+    }
+}
