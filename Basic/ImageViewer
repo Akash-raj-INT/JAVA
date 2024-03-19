@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+interface ImageDisplay {
+    void display();
+}
+
+class JPEGImageViewer implements ImageDisplay {
+    @Override
+    public void display() {
+        System.out.println("Displaying JPEG image");
+    }
+}
+
+class PNGImageViewer implements ImageDisplay {
+    @Override
+    public void display() {
+        System.out.println("Displaying PNG image");
+    }
+}
+
+class ImageViewer {
+    void showImage(ImageDisplay image) {
+        image.display();
+    }
+}
+
+public class ImageViewerMain {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        JPEGImageViewer jpegViewer = new JPEGImageViewer();
+        PNGImageViewer pngViewer = new PNGImageViewer();
+        ImageViewer imageViewer = new ImageViewer();
+        
+        System.out.println("Choose an image format: ");
+        System.out.println("1. JPEG");
+        System.out.println("2. PNG");
+        
+        int choice = scanner.nextInt();
+        
+        switch (choice) {
+            case 1:
+                imageViewer.showImage(jpegViewer);
+                break;
+            case 2:
+                imageViewer.showImage(pngViewer);
+                break;
+            default:
+                System.out.println("Invalid choice");
+        }
+        
+        scanner.close();
+    }
+}
