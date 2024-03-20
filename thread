@@ -1,0 +1,36 @@
+class Sharma extends Thread{
+    public void fun(){
+        for(int i=0; i<110; i++){
+            System.out.println("hello class");
+            try {
+                Thread.sleep(100);
+            } catch (Exception e){
+
+            }
+        }
+    }
+}
+class verma extends Thread{
+    public void run(){
+        for(int i=0; i<10; i++){
+            System.out.println("hello akash");
+
+            try {
+                Thread.sleep(100);
+            }
+            catch (Exception e){
+
+            }
+        }
+    }
+}
+class thread{
+    public static void main(String[] args) {
+        Sharma s = new Sharma();
+        verma v = new verma();
+      
+        s.start();
+        v.start();
+        
+    }
+}
