@@ -1,0 +1,13 @@
+import java.time.LocalDate;
+
+public class Data1 {
+
+public static void main(String[] args) {
+    LocalDate today = LocalDate.now();
+    LocalDate today1 =LocalDate.of(2024, 3, 22);
+    LocalDate date = today1.plusYears(2);
+    System.out.println(date);
+
+}
+    
+}
