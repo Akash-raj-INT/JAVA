@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String userInput = scanner.nextLine();
+
+        if (userInput.equals("this")) {
+            System.out.println("You entered 'this'.");
+        } else if (userInput.equals("that")) {
+            System.out.println("You entered 'that'.");
+        } else {
+            System.out.println("You entered something else.");
+        }
+        
+        scanner.close();
+    }
+}
