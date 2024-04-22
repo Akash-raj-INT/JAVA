@@ -1,0 +1,41 @@
+## barplots ###
+# barplot(x,main,xlab,ylab,col,namrs.args)
+
+# x=input vector,, main==title,,xlab==labelx axis,ylab==yaxis,,col==colours
+#   names.arg== values under plts
+# densityy===texture
+##border ==colour of background
+## horiz=true.  convert hori to vertical
+
+
+a<-c(8,6,7,11,12)
+res<-barplot(a,main="Details",xlab="Month",ylab="values",
+             names.arg =c("jan","feb","march","april","may"),
+             col="pink",density=50,border="black",horiz = TRUE,beside=TRUE)
+
+legend("topleft",c("c1","c2"),fill=c("red","green"))
+## u can use topright
+
+
+#######################################
+
+data<-matrix(c(122,203,167,118,520,183,67,212),nrow = 2,ncol = 4)
+data
+
+result<-barplot(data,main = "Main Graph",xlab = "class",ylab = "random",
+                names.arg = c("Ist","2nd","3rd","4th"),
+                col=c("pink","orange"),beside = TRUE)
+
+legend("topleft",c("c1","c2"),fill=c("red","green"))
+
+##############################################################
+
+x <- c(5, 7, 8, 7, 2, 2, 9, 4, 11, 12, 9, 6)
+y <- c(99, 86, 87, 88, 111, 103, 87, 94, 78, 77, 85, 86)
+
+
+plot(x, y, main="Result", xlab="X-label", ylab="Y-label", col="green", cex=3)
+
+x1 <- c(2,2,8,1,15,8,12,9,7,3,11,4,7,14,12)
+y1 <- c(100,105,84,105,90,99,90,95,94,100,79,112,91,80,85)
+points(x1,y1,col="blue", cex=3)
