@@ -1,0 +1,21 @@
+class A<M,T>{
+    M a;
+    T d;
+
+    void fun(M b, T c){
+        a=b;
+        d=c;
+        System.out.println(a+" "+d);
+    }}
+public class genericclass {
+ public static void main(String[] args) {
+    A<Integer,String> obj=new A<>();
+    obj.fun(10,"Mukesh");
+    A<String,Integer> obj1=new A<>();
+    obj1.fun("Hello",50);
+    A<Float, Integer> obj2=new A<>();
+    obj2.fun(105.4F,10);
+    A<Double, String> obj3=new A<>();
+    obj3.fun(10.5," Bye");
+ }   
+}
